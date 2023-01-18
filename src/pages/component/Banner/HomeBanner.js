@@ -4,7 +4,7 @@ import MainImages from "../../../assets/mainB.jpg";
 const HomeBanner = () => {
   return (
     <S.Wrapper>
-      <img src={MainImages} />
+      <img src={MainImages} alt="car" />
       <div></div>
       <S.Text>
         LET`S WATCH MOVIE

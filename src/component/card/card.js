@@ -24,6 +24,7 @@ const MovieCard = ({ movie }) => {
                 ? IMAGE_URL.current + movie.poster_path
                 : ReplaceIMAGE
             }
+            alt="car"
           />
         </S.Poster>
         <S.DescBox>
