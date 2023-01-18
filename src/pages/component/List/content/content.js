@@ -14,7 +14,7 @@ const MovieContent = () => {
   useEffect(() => {
     if (!inView || isFetching) return;
     fetchNextPage();
-  }, [inView]);
+  }, [inView, fetchNextPage, isFetching]);
 
   //react-query 안썻을떄
 

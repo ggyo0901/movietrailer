@@ -13,7 +13,7 @@ const MovieCard = ({ movie }) => {
     } else {
       setMovieOverView(movieOverView);
     }
-  }, [movie]);
+  }, [movie, movieOverView]);
   return (
     <S.Wrapper>
       <div>
@@ -24,6 +24,7 @@ const MovieCard = ({ movie }) => {
                 ? IMAGE_URL.current + movie.poster_path
                 : ReplaceIMAGE
             }
+            alt="car"
           />
         </S.Poster>
         <S.DescBox>
