@@ -3,7 +3,6 @@ import Axios from "./@core";
 const PATH = "/movie";
 const MovieAPi = {
   getPopularMovies({ params }) {
-    console.log(params);
     return Axios.get(PATH + "/popular", { params });
   },
   getSearchMovie({ params }) {

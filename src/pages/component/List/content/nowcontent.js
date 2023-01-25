@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import MovieCard from "../../../../component/card/card";
-import usePopularMovieQuery from "../../../../queries/usePopularMovieQuery";
+
 import { useInView } from "react-intersection-observer";
-const MovieContent = () => {
-  const { data: movieList, fetchNextPage, isFetching } = usePopularMovieQuery();
+import useNowMovieQuery from "../../../../queries/useNowMovieQuery";
+
+const NowMovieContent = () => {
+  const { data: nowmovieList, fetchNextPage, isFetching } = useNowMovieQuery();
   const [ref, inView] = useInView();
   // ref= useRef  //div 요소 선택
   // inview // 감지 됨에 따라 변화되느 옵션 값
 
-  console.log(movieList);
+  console.log(nowmovieList);
 
   useEffect(() => {
     if (!inView || isFetching) return;
@@ -33,8 +35,8 @@ const MovieContent = () => {
   return (
     <S.Wrapper>
       <S.Container>
-        {movieList &&
-          movieList.pages.map((page, index) => (
+        {nowmovieList &&
+          nowmovieList.pages.map((page, index) => (
             <>
               <React.Fragment key={index}>
                 {page.data.results.map((movie) => (
@@ -48,11 +50,11 @@ const MovieContent = () => {
     </S.Wrapper>
   );
 };
-export default MovieContent;
+export default NowMovieContent;
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  width: calc(100%-340px);
+  width: 100%;
 
   display: flex;
   flex-wrap: wrap;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import MainImages from "../../../assets/mainB.jpg";
+import MainImages from "../../../assets/cgv.jpg";
 
 const HomeBanner = () => {
   return (

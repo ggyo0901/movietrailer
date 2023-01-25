@@ -1,4 +1,6 @@
 const queryKey = {
   POPULAR_MOVIE_LIST: "POPULAR_MOVIE_LIST",
+  NOW_MOVIE_LIST: "NOW_MOVIE_LIST",
+  UPCOMING_MOVIE_LIST: "UPCOMING_MOVIE_LIST",
 };
 export default queryKey;
